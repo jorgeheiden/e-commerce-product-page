@@ -1,0 +1,51 @@
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid rgba(204, 204, 204, 0.342);
+    width: 80vw;
+}
+.contenedor__nav{
+    display: flex;
+    align-items: center;
+}
+.contenedor__nav__titulo{
+    margin-right: 1.5rem;
+    font-size: 2.2rem;
+}
+.contenedor__nav__links{
+    display: flex;
+    list-style: none;
+}
+.link{
+    display: flex;
+    align-items: center;
+    margin-left: 1.9rem;
+    border-bottom: 2px solid orange;
+    height: 5.4rem;
+}
+.link a{
+    text-decoration: none;
+    color: black;
+}
+.contenedor__perfil{
+    display: flex;
+    align-items: center;
+}
+.perfil__button{
+    width: 1.6rem;
+    height: 1.6rem;
+    background-image: url(../../../assets/images/icon-cart.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: white;
+    border: none;
+    margin-right: 2rem;
+}
+.perfil__img{
+    width: 3.2rem;
+    height: 3.2rem;
+    border: 3px solid orange;
+    border-radius: 100%;
+}
