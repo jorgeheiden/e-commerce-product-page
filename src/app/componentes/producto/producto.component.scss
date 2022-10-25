@@ -1,0 +1,116 @@
+.contenedor{
+    display: flex;
+}
+.contenedor__imagenes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+.imagen__principal{
+    width: 48%;
+    margin-top: 3rem;
+}
+.imagen__principal img{
+    width: 100%;
+    border-radius: 3%;
+}
+.imagen__thumbail{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 48%;
+}
+.imagen__thumbail img{
+    width: 22%;
+    margin: 0 0.5rem 0 0.5rem;
+    border-radius: 5%;
+    cursor: pointer;
+}
+.imagen__thumbail img:hover{
+    opacity: 0.5;
+}
+
+.contenedor__datos{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.dato__marca{
+    font-size: 0.8rem;
+    color: hsl(26, 100%, 55%);
+    margin-bottom: 1rem;
+}
+.dato__titulo{
+    font-size: 2rem;
+    width: 63%;
+    font-weight: 700;
+}
+.dato__descripcion{
+    width: 63%;
+    font-weight: 500;
+    color: hsl(219, 9%, 45%);
+    margin-top: 1rem;
+}
+.contenedor__precio{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.precio__precio{
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.precio__descuento__porcenteje{
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-left: 1rem;
+    padding: 0.2rem;
+    border-radius: 10%;
+    color: hsl(26, 100%, 55%);
+    background-color: hsl(25, 100%, 94%);
+}
+.precio__descuento__monto{
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(219, 9%, 45%);
+    text-decoration: line-through 2px hsl(219, 9%, 45%);
+    margin-top: 0.3rem;
+}
+.contenedor__botones{
+    display: flex;
+    
+    width: 63%;
+    margin-top: 2rem;
+}
+.botones__cantidad{
+    display: flex;
+}
+.boton__menos{
+    width: 2.2rem;
+    height: 2.2rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+.boton__cantidad{
+    padding: 0.5rem 1rem 0.4rem 1rem;
+    background-color: rgb(233, 233, 233);
+
+}
+.boton__mas{
+    width: 2.2rem;
+    height: 2.2rem;
+    border: none;
+}
+.boton__agregar{
+    width: 65%;
+    margin-left: 1rem;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: hsl(26, 100%, 55%);
+    font-weight: 600;
+    cursor: pointer;
+}

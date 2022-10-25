@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 3px solid rgba(204, 204, 204, 0.342);
+    border-bottom: 2.5px solid rgba(204, 204, 204, 0.342);
     width: 80vw;
 }
 .contenedor__nav{
@@ -11,30 +11,36 @@
 }
 .contenedor__nav__titulo{
     margin-right: 1.5rem;
-    font-size: 2.2rem;
+    font-size: 2rem;
+    font-weight: 700;
 }
 .contenedor__nav__links{
     display: flex;
     list-style: none;
 }
 .link{
-    display: flex;
     align-items: center;
     margin-left: 1.9rem;
-    border-bottom: 2px solid orange;
-    height: 5.4rem;
+    font-weight: 500;
 }
 .link a{
+    display: flex;
+    align-items: center;
+    height: 5.4rem;
     text-decoration: none;
-    color: black;
+    color: hsl(219, 9%, 45%);
+}
+.link a:hover{
+    border-bottom: 3px solid hsl(26, 100%, 55%);
+    color: hsl(220, 13%, 13%);
 }
 .contenedor__perfil{
     display: flex;
     align-items: center;
 }
 .perfil__button{
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.5rem;
+    height: 1.5rem;
     background-image: url(../../../assets/images/icon-cart.svg);
     background-position: center;
     background-repeat: no-repeat;
