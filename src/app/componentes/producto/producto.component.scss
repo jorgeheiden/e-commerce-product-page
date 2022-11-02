@@ -15,6 +15,7 @@
 .imagen__principal img{
     width: 100%;
     border-radius: 3%;
+    cursor: pointer;
 }
 .imagen__thumbail{
     display: flex;
@@ -31,7 +32,88 @@
 .imagen__thumbail img:hover{
     opacity: 0.5;
 }
+.thumbnail__seleccionado{
+    border: 3px solid hsl(26, 100%, 55%);
+    opacity: 0.6;
+}
+//Modal
 
+.contenedor__modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(7, 7, 7, 0.479);
+    top: 0;
+}
+.ocultar__modal{
+    display: none;
+}
+.modal__imagen{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.modal__imagen img{
+    width: 30%;
+    border-radius: 8px;
+}
+.modal__imagen button{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 100%;
+    border: none;
+}
+.boton__1{
+    position: absolute;
+    z-index: 11;
+    right: 63%;
+    //left: 32%;
+    background-image: url("../../../assets/images/icon-previous.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 28%;
+    cursor: pointer;
+}
+.boton__2{
+    position: absolute;
+    z-index: 20;
+    left: 63%;
+    background-image: url("../../../assets/images/icon-next.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 28%;
+    cursor: pointer;
+}
+.modal__thumbnail{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.modal__thumbnail img{
+    width: 5.5%;
+    border-radius: 5px;
+    margin: 1rem 0.5rem 0 0.5rem;
+}
+.modal__thumbnail img:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.modal__cerrar{
+   margin-left: 28%;
+   margin-bottom: 1rem;
+   cursor: pointer;
+}
+.modal__cerrar img{
+    width: 1.2rem;
+    height: 1.2rem;
+}
 .contenedor__datos{
     width: 50vw;
     display: flex;
@@ -51,6 +133,7 @@
 .dato__descripcion{
     width: 63%;
     font-weight: 500;
+    font-size: 1rem;
     color: hsl(219, 9%, 45%);
     margin-top: 1rem;
 }
@@ -93,6 +176,7 @@
     height: 2.2rem;
     border: none;
     border-radius: 5px 0 0 5px;
+    cursor: pointer;
 }
 .boton__cantidad{
     padding: 0.5rem 1rem 0.4rem 1rem;
@@ -103,6 +187,7 @@
     width: 2.2rem;
     height: 2.2rem;
     border: none;
+    cursor: pointer;
 }
 .boton__agregar{
     width: 65%;

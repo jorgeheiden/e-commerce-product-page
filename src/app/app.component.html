@@ -1,4 +1,4 @@
 <div class="contenedor">
-    <app-nav></app-nav>
-    <app-producto></app-producto>
+    <app-nav [cantidad]="cant" (nuevoEvento)="reset($event)" ></app-nav>
+    <app-producto (cantidadEvent)="cantidad($event)" ></app-producto>
 </div>

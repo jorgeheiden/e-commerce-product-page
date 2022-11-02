@@ -1,4 +1,5 @@
-<nav class="contenedor">
+<nav>
+   <div class="contenedor">
     <div class="contenedor__nav">
         <h1 class="contenedor__nav__titulo">sneakers</h1>
         <ul class="contenedor__nav__links">
@@ -10,7 +11,39 @@
         </ul>
     </div>
     <div class="contenedor__perfil">
-        <button class="perfil__button"></button>
+        <div class="boton__carrito">
+            <button (click)="ocultarMostrarCarrito()" class="perfil__button"></button>
+            <p>{{cantidadDeProductos}}</p>
+        </div>
         <img class="perfil__img" src="../../../assets/images/image-avatar.png" alt="">
+    </div>
+    <div class="carrito" [ngClass]="{'ocultarCarrito': ocultarCarrito}">
+        <div class="carrito__titulo">
+            <h1>Cart</h1>
+        </div>
+        <div *ngIf="cantidadDeProductos"  class="carrito__conProducto">
+            <div class="producto">
+                <img src="../../../assets/images/image-product-1-thumbnail.jpg" alt="">
+                <p>Fall Limited Edition Sneakers $125.00 *  <span>${{total}}</span></p>
+                <button (click)="eliminarProductos()" ></button>
+            </div>
+            <div class="checkout">
+                <button (click)="checkOut()">Checkout</button>
+            </div>
+        </div>
+        <div *ngIf="!cantidadDeProductos" class="carrito__sinProducto">
+            <p>Your Cart is empty.</p>
+        </div>
+    </div>
+</div>
+    <div class="contenedor__nav__mobile">
+        <div class="mobile__menu">
+            <button></button>
+        </div>
+        <h1>Sneakers</h1>
+        <div class="mobile__carrito__perfil">
+            <button class="mobile__carrito"></button>
+            <img src="" alt="">
+        </div>
     </div>
 </nav>

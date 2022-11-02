@@ -1,13 +1,13 @@
 <section class="contenedor">
     <div class="contenedor__imagenes">
         <div class="imagen__principal">
-            <img src="../../../assets/images/image-product-1.jpg" alt="">
+            <img [src]="imagen" (click)="abrirModal()" alt="">
         </div>
         <div class="imagen__thumbail">
-            <img src="../../../assets/images/image-product-1-thumbnail.jpg" alt="">
-            <img src="../../../assets/images/image-product-1-thumbnail.jpg" alt="">
-            <img src="../../../assets/images/image-product-1-thumbnail.jpg" alt="">
-            <img src="../../../assets/images/image-product-1-thumbnail.jpg" alt="">
+            <img [ngClass]="{'thumbnail__seleccionado': thumbnailSelecionado[0].thumbnail}" (click)="imagenSeleccionada(1)" src="../../../assets/images/image-product-1-thumbnail.jpg" alt="">
+            <img [ngClass]="{'thumbnail__seleccionado': thumbnailSelecionado[1].thumbnail}" (click)="imagenSeleccionada(2)" src="../../../assets/images/image-product-2-thumbnail.jpg" alt="">
+            <img [ngClass]="{'thumbnail__seleccionado': thumbnailSelecionado[2].thumbnail}" (click)="imagenSeleccionada(3)" src="../../../assets/images/image-product-3-thumbnail.jpg" alt="">
+            <img [ngClass]="{'thumbnail__seleccionado': thumbnailSelecionado[3].thumbnail}" (click)="imagenSeleccionada(4)" src="../../../assets/images/image-product-4-thumbnail.jpg" alt="">
         </div>
     </div>
     <div class="contenedor__datos">
@@ -23,11 +23,27 @@
         <p class="precio__descuento__monto">$250.00</p>
         <div class="contenedor__botones">
             <div class="botones__cantidad">
-                <button class="boton__menos">-</button>
-                <p class="boton__cantidad">0</p>
-                <button class="boton__mas">+</button>
+                <button (click)="restarProducto()" class="boton__menos">-</button>
+                <p class="boton__cantidad">{{cantidad}}</p>
+                <button (click)="sumarProducto()" class="boton__mas">+</button>
             </div>
-            <button class="boton__agregar">Add to cart</button>
+            <button (click)="agregarAlCarrito()" class="boton__agregar">Add to cart</button>
         </div>
+    </div>
+    <div class="contenedor__modal" [ngClass]="{'ocultar__modal':close}">
+            <div class="modal__cerrar" > 
+                <img (click)="cerrar()" src="../../../assets/images/icon-close.svg" alt="">
+            </div>
+           <div class="modal__imagen">
+                <button class="boton__1" (click)="botonPrevio(1)"></button>
+                <img [src]="imagen" alt="">
+                <button class="boton__2" (click)="botonSiguiente(1)"></button>
+           </div>
+           <div class="modal__thumbnail">
+                <img (click)="imagenSeleccionada(1)" [ngClass]="{'thumbnail__seleccionado': thumbnailSelecionado[0].thumbnail}" src="../../../assets/images/image-product-1-thumbnail.jpg" alt="">
+                <img (click)="imagenSeleccionada(2)" [ngClass]="{'thumbnail__seleccionado': thumbnailSelecionado[1].thumbnail}" src="../../../assets/images/image-product-2-thumbnail.jpg" alt="">
+                <img (click)="imagenSeleccionada(3)" [ngClass]="{'thumbnail__seleccionado': thumbnailSelecionado[2].thumbnail}" src="../../../assets/images/image-product-3-thumbnail.jpg" alt="">
+                <img (click)="imagenSeleccionada(4)" [ngClass]="{'thumbnail__seleccionado': thumbnailSelecionado[3].thumbnail}" src="../../../assets/images/image-product-4-thumbnail.jpg" alt="">
+           </div>
     </div>
 </section>
