@@ -18,6 +18,7 @@ export class NavComponent implements OnInit {
  
   total:number = 0
   ocultarCarrito:boolean = true
+  menuM:boolean = true
   constructor() { }
 
   ngOnInit(): void {
@@ -41,6 +42,14 @@ export class NavComponent implements OnInit {
  checkOut(): void{
   this.ocultarCarrito = true
   this.eliminarProductos()
+ }
+
+ menuMobile(): void{
+  if(this.menuM){
+    this.menuM = false
+  } else {
+    this.menuM = true
+  }
  }
  
 }

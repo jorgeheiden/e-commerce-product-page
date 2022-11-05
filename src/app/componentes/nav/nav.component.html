@@ -1,6 +1,7 @@
 <nav>
    <div class="contenedor">
     <div class="contenedor__nav">
+        <button (click)="menuMobile()" class="menu__mobile"></button>
         <h1 class="contenedor__nav__titulo">sneakers</h1>
         <ul class="contenedor__nav__links">
             <li class="link"><a href="">Collections</a></li>
@@ -8,6 +9,16 @@
             <li class="link"><a href="">Women</a></li>
             <li class="link"><a href="">About</a></li>
             <li class="link"><a href="">Contact</a></li>
+        </ul>
+    </div>
+    <div class="menu__mobile__links ocultar__menu__mobile" [ngClass]="{'ocultar__menu__mobile': menuM}">
+        <ul class="links">
+            <li><button (click)="menuMobile()" class="cerrar"></button></li>
+            <li><a href="">Collections</a></li>
+            <li><a href="">Men</a></li>
+            <li><a href="">Women</a></li>
+            <li><a href="">About </a></li>
+            <li><a href="">Contact </a></li>
         </ul>
     </div>
     <div class="contenedor__perfil">
@@ -36,14 +47,4 @@
         </div>
     </div>
 </div>
-    <div class="contenedor__nav__mobile">
-        <div class="mobile__menu">
-            <button></button>
-        </div>
-        <h1>Sneakers</h1>
-        <div class="mobile__carrito__perfil">
-            <button class="mobile__carrito"></button>
-            <img src="" alt="">
-        </div>
-    </div>
 </nav>
